@@ -1,0 +1,985 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CodeCraft - Elevate Your Skills</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Toast -->
+<div id="toast">Success: Message sent successfully!</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo" onclick="showPage('home')">
+    <div class="logo-dot"></div>
+    Code<span>Craft</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')" class="active" id="link-home">Home</a></li>
+    <li><a href="#" onclick="showPage('about')" id="link-about">About Us</a></li>
+    <li><a href="#" onclick="showPage('portfolio')" id="link-portfolio">Portfolio</a></li>
+    <li><a href="#" onclick="showPage('contact')" id="link-contact">Contact</a></li>
+  </ul>
+  <a href="#" class="btn-nav" onclick="showPage('login')">Login</a>
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" onclick="toggleMobileNav()">Close</button>
+  <a href="#" onclick="showPage('home');toggleMobileNav()">Home</a>
+  <a href="#" onclick="showPage('about');toggleMobileNav()">About Us</a>
+  <a href="#" onclick="showPage('portfolio');toggleMobileNav()">Portfolio</a>
+  <a href="#" onclick="showPage('contact');toggleMobileNav()">Contact</a>
+  <a href="#" onclick="showPage('login');toggleMobileNav()">Login</a>
+</div>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="mesh"></div>
+    <div class="grid-overlay"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Nepal's Premium Training Hub</div>
+      <h1>Elevate Your Skills<br>For a <em>Brighter</em> Future</h1>
+      <p>Industry-expert-led programs designed to launch your career forward. Real skills, real results, real community.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn-primary" onclick="showPage('contact')">Enroll Now -></a>
+        <a href="#" class="btn-ghost" onclick="showPage('about')">Our Story</a>
+      </div>
+      <div class="stats-strip">
+        <div class="stat">
+          <span class="stat-num" data-target="10000">0<span>+</span></span>
+          <div class="stat-label">Learners</div>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="50">0<span>+</span></span>
+          <div class="stat-label">Courses</div>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="95">0<span>%</span></span>
+          <div class="stat-label">Placement Rate</div>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="120">0<span>+</span></span>
+          <div class="stat-label">5-Star Reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Card -->
+    <div class="hero-visual">
+      <div class="card-stack">
+        <div class="c-card back"></div>
+        <div class="c-card front">
+          <div class="c-course-tag">Most Popular</div>
+          <h3>Data Science with Python</h3>
+          <p>Master analytics, ML, and visualization with real-world projects guided by industry experts.</p>
+          <div class="c-card-footer">
+            <span class="c-price">NPR 25,000</span>
+            <div class="c-avatars">
+              <div class="av" style="background:#55f7d2">RS</div>
+              <div class="av" style="background:#8b5cf6">MK</div>
+              <div class="av" style="background:#ff4f87">AB</div>
+              <div class="av" style="background:#7c3af0">+8</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses" style="padding-top:40px;">
+    <div class="section-tag reveal">Featured Courses</div>
+    <h2 class="section-title reveal">Learn Skills That <em>Matter</em></h2>
+    <p style="color:var(--muted);max-width:520px;line-height:1.7" class="reveal">
+      From IT to business, our industry-curated programs give you the edge in a competitive job market.
+    </p>
+
+    <div class="courses-grid">
+      <div class="course-card reveal">
+        <div class="cc-icon course-thumb">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=120&h=120&fit=crop&crop=center" alt="Artificial intelligence course" />
+        </div>
+        <h3>AI for Everyone</h3>
+        <p>Understand and apply artificial intelligence concepts in real business contexts. No coding required.</p>
+        <div class="cc-meta">
+          <span class="cc-dur">Duration: 25 Days</span>
+          <span class="cc-price">NPR 15,000</span>
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="cc-icon course-thumb">
+          <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=120&h=120&fit=crop&crop=center" alt="Cybersecurity course" />
+        </div>
+        <h3>Cybersecurity</h3>
+        <p>Protect digital assets with hands-on ethical hacking, threat analysis, and security operations training.</p>
+        <div class="cc-meta">
+          <span class="cc-dur">Duration: 2 Months</span>
+          <span class="cc-price">NPR 30,000</span>
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="cc-icon course-thumb">
+          <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=120&h=120&fit=crop&crop=center" alt="Digital marketing course" />
+        </div>
+        <h3>Digital Marketing</h3>
+        <p>SEO, social media, content strategy, and analytics - everything you need to grow brands online.</p>
+        <div class="cc-meta">
+          <span class="cc-dur">Duration: 1 Month</span>
+          <span class="cc-price">NPR 14,000</span>
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="cc-icon course-thumb">
+          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=120&h=120&fit=crop&crop=center" alt="UI/UX design course" />
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Design intuitive, beautiful interfaces with Figma, wireframing, and user research methodologies.</p>
+        <div class="cc-meta">
+          <span class="cc-dur">Duration: 1 Month</span>
+          <span class="cc-price">NPR 12,000</span>
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="cc-icon course-thumb">
+          <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=120&h=120&fit=crop&crop=center" alt="DevOps and cloud course" />
+        </div>
+        <h3>DevOps & Cloud</h3>
+        <p>Master CI/CD, Docker, Kubernetes and AWS to deploy scalable, resilient applications in production.</p>
+        <div class="cc-meta">
+          <span class="cc-dur">Duration: 3 Months</span>
+          <span class="cc-price">NPR 30,000</span>
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="cc-icon course-thumb">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&h=120&fit=crop&crop=center" alt="Data analysis course" />
+        </div>
+        <h3>Data Analysis</h3>
+        <p>Transform raw data into powerful insights using Excel, Python pandas, and Tableau dashboards.</p>
+        <div class="cc-meta">
+          <span class="cc-dur">Duration: 3 Weeks</span>
+          <span class="cc-price">NPR 10,000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="why-grid">
+      <div>
+        <div class="section-tag reveal">Why CodeCraft</div>
+        <h2 class="section-title reveal">Built for <em>Real-World</em> Success</h2>
+        <p style="color:var(--muted);line-height:1.7;margin-bottom:40px" class="reveal">
+          We don't just teach theory. Every program is crafted with industry mentors to ensure you leave job-ready.
+        </p>
+        <div class="why-features">
+          <div class="why-feat reveal">
+            <div class="feat-icon" style="background:rgba(240,201,64,.12)">Learn</div>
+            <div>
+              <h4>Industry Expert Instructors</h4>
+              <p>Learn from professionals with 10+ years of active field experience, not just academics.</p>
+            </div>
+          </div>
+          <div class="why-feat reveal">
+            <div class="feat-icon" style="background:rgba(58,240,192,.12)">Jobs</div>
+            <div>
+              <h4>Placement Support</h4>
+              <p>Our dedicated career team connects graduates with 50+ partner companies actively hiring.</p>
+            </div>
+          </div>
+          <div class="why-feat reveal">
+            <div class="feat-icon" style="background:rgba(240,90,126,.12)">Community</div>
+            <div>
+              <h4>Lifetime Community Access</h4>
+              <p>Join a 10,000+ strong network of learners, alumni, and mentors - forever.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual reveal">
+        <div class="ring-anim">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring-orbit" style="animation-duration:8s">
+            <div class="orbit-dot" style="background:var(--accent)"></div>
+          </div>
+          <div class="ring-orbit" style="animation-duration:12s;inset:40px">
+            <div class="orbit-dot" style="background:var(--accent2)"></div>
+          </div>
+          <div class="ring-orbit" style="animation-duration:20s;inset:80px;animation-direction:reverse">
+            <div class="orbit-dot" style="background:var(--accent3)"></div>
+          </div>
+          <div class="ring-center">
+            <div class="ring-center-num">95%</div>
+            <div class="ring-center-label">Placement<br>Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="overflow:hidden">
+    <div class="section-tag reveal">Testimonials</div>
+    <h2 class="section-title reveal">Loved by Our <em>Students</em></h2>
+
+    <div class="testi-track">
+      <div class="testi-inner" id="testiInner">
+        <!-- cards duplicated for infinite scroll -->
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"CodeCraft completely transformed my career path. The instructors bring real-world examples that you simply can't find in textbooks."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:var(--accent)">SK</div>
+            <div>
+              <div class="testi-name">Siyun Khadgi</div>
+              <div class="testi-role">Digital Marketing Specialist</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"The cybersecurity curriculum is incredibly comprehensive. I went from zero to landing an internship within 3 months of completing the course."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:var(--accent2)">SK</div>
+            <div>
+              <div class="testi-name">Satyam Karki</div>
+              <div class="testi-role">Cybersecurity Intern, Prixa</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"Value for money is unbeatable. The community keeps giving even after you finish your course - networking events, job boards, everything."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:var(--accent3)">AR</div>
+            <div>
+              <div class="testi-name">Abhinash Rana</div>
+              <div class="testi-role">UI/UX Designer, Corvo Inc.</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"I started with zero coding knowledge. After Data Science with Python, I'm now analyzing data for a fintech company. Incredible journey!"</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:#7c3af0">MP</div>
+            <div>
+              <div class="testi-name">Minu Pokharel</div>
+              <div class="testi-role">Software Developer, Cedar Gate</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"The mentor support during and after the program is what sets CodeCraft apart. They genuinely care about your success beyond just the classroom."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:#ff4f87">PS</div>
+            <div>
+              <div class="testi-name">Prabha Tamang</div>
+              <div class="testi-role">Marketing Executive</div>
+            </div>
+          </div>
+        </div>
+        <!-- duplicates for seamless loop -->
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"CodeCraft completely transformed my career path. The instructors bring real-world examples that you simply can't find in textbooks."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:var(--accent)">SK</div>
+            <div>
+              <div class="testi-name">Siyun Khadgi</div>
+              <div class="testi-role">Digital Marketing Specialist</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"The cybersecurity curriculum is incredibly comprehensive. I went from zero to landing an internship within 3 months of completing the course."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:var(--accent2)">SK</div>
+            <div>
+              <div class="testi-name">Satyam Karki</div>
+              <div class="testi-role">Cybersecurity Intern, Prixa</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"Value for money is unbeatable. The community keeps giving even after you finish your course - networking events, job boards, everything."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:var(--accent3)">AR</div>
+            <div>
+              <div class="testi-name">Abhinash Rana</div>
+              <div class="testi-role">UI/UX Designer, Corvo Inc.</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"I started with zero coding knowledge. After Data Science with Python, I'm now analyzing data for a fintech company. Incredible journey!"</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:#7c3af0">MP</div>
+            <div>
+              <div class="testi-name">Minu Pokharel</div>
+              <div class="testi-role">Software Developer, Cedar Gate</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">5 stars</div>
+          <blockquote>"The mentor support during and after the program is what sets CodeCraft apart. They genuinely care about your success beyond just the classroom."</blockquote>
+          <div class="testi-author">
+            <div class="testi-av" style="background:#ff4f87">PS</div>
+            <div>
+              <div class="testi-name">Prabha Tamang</div>
+              <div class="testi-role">Marketing Executive</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section>
+    <div style="
+      background: linear-gradient(135deg, rgba(240,201,64,.12), rgba(58,240,192,.08));
+      border: 1px solid rgba(240,201,64,.2);
+      border-radius: calc(var(--radius)*2);
+      padding: 70px 5%; text-align:center;
+    " class="reveal">
+      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;letter-spacing:-.02em;margin-bottom:16px">
+        Ready to Start Your Journey?
+      </h2>
+      <p style="color:var(--muted);max-width:480px;margin:0 auto 36px;line-height:1.7">
+        Enroll today and get a free career counseling session with our industry experts.
+      </p>
+      <a href="#" class="btn-primary" onclick="showPage('contact')" style="font-size:1.05rem">
+        Get Free Counseling ->
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" onclick="showPage('home')">
+          <div class="logo-dot"></div>
+          Code<span>Craft</span>
+        </a>
+        <p>Empowering every individual with the skills they need to thrive in a digital-first world. Based in Kathmandu, reaching everywhere.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About Us</a></li>
+          <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+          <li><a href="#" onclick="showPage('login')">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Baneshwor, Kathmandu</a></li>
+          <li><a href="#">+977 9800000000</a></li>
+          <li><a href="#">info@codecraft.com.np</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright 2026 CodeCraft Nepal. All rights reserved.</span>
+      <span>Made with care in Kathmandu</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ABOUT PAGE -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div>
+      <div class="section-tag" style="margin-top:0">Our Story</div>
+      <h1>We Exist to<br><em>Empower</em> People</h1>
+      <p>CodeCraft was born from a simple belief: everyone deserves access to world-class skill development. Founded in Kathmandu, we've grown into Nepal's most trusted training hub.</p>
+      <p>Our instructors aren't just teachers - they're active industry professionals who bring current, real-world knowledge into every session. We believe learning should be practical, engaging, and life-changing.</p>
+      <p>Today, with 10,000+ graduates placed at top companies across Nepal and beyond, we're just getting started.</p>
+      <a href="#" class="btn-primary" onclick="showPage('contact')" style="margin-top:20px;display:inline-block">Start Learning -></a>
+    </div>
+    <div class="about-img-block">
+    <div class="about-img" style="padding:0;overflow:hidden;border-radius:20px;"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=960&h=840&fit=crop&crop=center" alt="High school students studying together" style="width:100%;height:100%;object-fit:cover;border-radius:20px;" /></div>
+      <div class="about-badge">
+        Est. 2020
+        <span>Kathmandu, Nepal</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <span class="value-icon">Passion</span>
+      <h3>Passion-Driven</h3>
+      <p>We pour genuine passion into every curriculum, every session, and every student interaction.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">Focus</span>
+      <h3>Outcome-Focused</h3>
+      <p>Skills for the sake of skills aren't enough. We measure success by your career growth, not class attendance.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">Growth</span>
+      <h3>Community First</h3>
+      <p>Our alumni network is a lifelong asset - job referrals, collaborations, and friendships that last forever.</p>
+    </div>
+  </div>
+
+  <div class="team-section">
+    <div class="section-tag">The People</div>
+    <h2 class="section-title">Meet Our <em>Instructors</em></h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-av" style="background:transparent;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face" alt="Nutan Sharma" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
+        <h4>Nutan Sharma</h4>
+        <span>Lead Instructor, SEO</span>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:transparent;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face" alt="Shristi Thapa" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
+        <h4>Shristi Thapa</h4>
+        <span>UI/UX Design Lead</span>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:transparent;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face" alt="Prajwal Karki" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
+        <h4>Prajwal Karki</h4>
+        <span>Data Science Expert</span>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:transparent;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face" alt="Anita Rai" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
+        <h4>Anita Rai</h4>
+        <span>HR & Soft Skills</span>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:transparent;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face" alt="Bikash Thapa" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
+        <h4>Bikash Thapa</h4>
+        <span>Cybersecurity</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" onclick="showPage('home')">
+          <div class="logo-dot"></div>
+          Code<span>Craft</span>
+        </a>
+        <p>Empowering every individual with the skills they need to thrive in a digital-first world.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About Us</a></li>
+          <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+          <li><a href="#" onclick="showPage('login')">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Baneshwor, Kathmandu</a></li>
+          <li><a href="#">+977 9800000000</a></li>
+          <li><a href="#">info@codecraft.com.np</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright 2026 CodeCraft Nepal. All rights reserved.</span>
+      <span>Made with care in Kathmandu</span>
+    </div>
+  </footer>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <div class="section-tag" style="margin-top:0">Get In Touch</div>
+      <h1>Let's <em>Connect</em> &amp; Talk</h1>
+      <p>Have questions about our courses? Ready to enroll? Fill out the form and our team will reach out within 24 hours.</p>
+
+      <div class="contact-items">
+        <div class="ci">
+          <div class="ci-icon" style="background:rgba(240,201,64,.12)">Location</div>
+          <div>
+            <strong>Visit Us</strong>
+            <span>Shree Bhawan, Mid Baneshwor, Kathmandu 44600</span>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon" style="background:rgba(58,240,192,.12)">Phone</div>
+          <div>
+            <strong>Call Us</strong>
+            <span>+977 9800000000</span>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon" style="background:rgba(240,90,126,.12)">Email</div>
+          <div>
+            <strong>Email Us</strong>
+            <span>info@codecraft.com.np</span>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon" style="background:rgba(124,58,240,.12)">Hours</div>
+          <div>
+            <strong>Office Hours</strong>
+            <span>Sun-Fri, 9:00 AM - 6:00 PM</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map" style="margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4712258754!2d85.33597!3d27.70169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb978b19ed6aaee6d!2sBaneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+          width="100%" height="220" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="CodeCraft Location - Baneshwor, Kathmandu"></iframe>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:28px">Send a Message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Aarav" id="cf-fname" />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Sharma" id="cf-lname" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="aarav@example.com" id="cf-email" />
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+977 98XXXXXXXX" id="cf-phone" />
+      </div>
+      <div class="form-group">
+        <label>Interested Course</label>
+        <select id="cf-course">
+          <option value="">Select a course...</option>
+          <option>AI for Everyone</option>
+          <option>Cybersecurity</option>
+          <option>Digital Marketing</option>
+          <option>UI/UX Design</option>
+          <option>DevOps & Cloud</option>
+          <option>Data Science with Python</option>
+          <option>Data Analysis</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea placeholder="Tell us about your goals..." id="cf-msg"></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitContact()">Send Message -></button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" onclick="showPage('home')">
+          <div class="logo-dot"></div>
+          Code<span>Craft</span>
+        </a>
+        <p>Empowering every individual with the skills they need to thrive in a digital-first world.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About Us</a></li>
+          <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+          <li><a href="#" onclick="showPage('login')">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Baneshwor, Kathmandu</a></li>
+          <li><a href="#">+977 9800000000</a></li>
+          <li><a href="#">info@codecraft.com.np</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright 2026 CodeCraft Nepal. All rights reserved.</span>
+      <span>Made with care in Kathmandu</span>
+    </div>
+  </footer>
+</div>
+
+<!-- PORTFOLIO PAGE -->
+<div class="page" id="page-portfolio">
+
+  <!-- Demo Modal Overlay -->
+  <div id="demoModal">
+    <div class="demo-shell">
+      <div class="demo-header">
+        <span id="demoTitle" class="demo-title"></span>
+        <button onclick="closeDemo()" class="demo-close">✕ Close</button>
+      </div>
+      <iframe id="demoFrame" src="" class="demo-frame"></iframe>
+    </div>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;padding:80px 5% 60px;">
+    <div class="section-tag" style="margin-top:0">Our Work</div>
+    <h1 style="font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.03em;margin-bottom:16px">
+      Demo <em>Portfolio</em>
+    </h1>
+    <p style="color:var(--muted);max-width:520px;line-height:1.7;margin-bottom:56px">
+      Explore our hands-on demo projects covering the core building blocks of modern web development.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;">
+
+      <!-- HTML DEMO -->
+      <div onclick="openDemo('https://rahulchaudhary12-debug.github.io/Demos/demo-html.html','HTML Demo — Semantic Markup &amp; Forms')" style="
+        background:linear-gradient(135deg,rgba(240,201,64,.10),rgba(240,201,64,.04));
+        border:1px solid rgba(240,201,64,.25);
+        border-radius:20px;padding:36px 28px;
+        display:flex;flex-direction:column;gap:20px;
+        transition:transform .3s,box-shadow .3s;
+        cursor:pointer;
+      " onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 60px rgba(240,201,64,.12)'"
+         onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="
+          width:56px;height:56px;border-radius:14px;
+          background:rgba(240,201,64,.15);
+          display:flex;align-items:center;justify-content:center;
+          font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;
+          color:#f0c940;letter-spacing:.03em;
+        ">&lt;/&gt;</div>
+        <div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;margin-bottom:10px;color:var(--text)">HTML Demo</h3>
+          <p style="color:var(--muted);line-height:1.65;font-size:.93rem">Semantic markup, page structure, forms, tables, and lists — pure HTML with no styling applied.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;">
+          <span style="font-size:.8rem;color:#f0c940;font-weight:600;letter-spacing:.06em;text-transform:uppercase">HTML5</span>
+          <span style="
+            background:rgba(240,201,64,.15);color:#f0c940;
+            border:1px solid rgba(240,201,64,.3);border-radius:50px;
+            padding:6px 18px;font-size:.82rem;font-weight:600;
+          ">View Demo →</span>
+        </div>
+      </div>
+
+      <!-- CSS DEMO -->
+      <div onclick="openDemo('https://rahulchaudhary12-debug.github.io/Demos/demo-css.html','CSS Demo — Stylesheet Showcase')" style="
+        background:linear-gradient(135deg,rgba(58,240,192,.10),rgba(58,240,192,.04));
+        border:1px solid rgba(58,240,192,.25);
+        border-radius:20px;padding:36px 28px;
+        display:flex;flex-direction:column;gap:20px;
+        transition:transform .3s,box-shadow .3s;
+        cursor:pointer;
+      " onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 60px rgba(58,240,192,.12)'"
+         onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="
+          width:56px;height:56px;border-radius:14px;
+          background:rgba(58,240,192,.15);
+          display:flex;align-items:center;justify-content:center;
+          font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;
+          color:#3af0c0;letter-spacing:.03em;
+        ">#{ }</div>
+        <div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;margin-bottom:10px;color:var(--text)">CSS Demo</h3>
+          <p style="color:var(--muted);line-height:1.65;font-size:.93rem">Variables, Flexbox, Grid, animations, buttons, cards and responsive breakpoints — pure CSS only.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;">
+          <span style="font-size:.8rem;color:#3af0c0;font-weight:600;letter-spacing:.06em;text-transform:uppercase">CSS3</span>
+          <span style="
+            background:rgba(58,240,192,.15);color:#3af0c0;
+            border:1px solid rgba(58,240,192,.3);border-radius:50px;
+            padding:6px 18px;font-size:.82rem;font-weight:600;
+          ">View Demo →</span>
+        </div>
+      </div>
+
+      <!-- JAVASCRIPT DEMO -->
+      <div onclick="openDemo('https://rahulchaudhary12-debug.github.io/Demos/demo-js.html','JavaScript Demo — Calculator')" style="
+        background:linear-gradient(135deg,rgba(240,90,126,.10),rgba(240,90,126,.04));
+        border:1px solid rgba(240,90,126,.25);
+        border-radius:20px;padding:36px 28px;
+        display:flex;flex-direction:column;gap:20px;
+        transition:transform .3s,box-shadow .3s;
+        cursor:pointer;
+      " onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 60px rgba(240,90,126,.12)'"
+         onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="
+          width:56px;height:56px;border-radius:14px;
+          background:rgba(240,90,126,.15);
+          display:flex;align-items:center;justify-content:center;
+          font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;
+          color:#f05a7e;letter-spacing:.03em;
+        ">JS</div>
+        <div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;margin-bottom:10px;color:var(--text)">Javascript Demo</h3>
+          <p style="color:var(--muted);line-height:1.65;font-size:.93rem">A fully working calculator built with pure JavaScript — DOM events, logic, keyboard support, no libraries.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;">
+          <span style="font-size:.8rem;color:#f05a7e;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Vanilla JS</span>
+          <span style="
+            background:rgba(240,90,126,.15);color:#f05a7e;
+            border:1px solid rgba(240,90,126,.3);border-radius:50px;
+            padding:6px 18px;font-size:.82rem;font-weight:600;
+          ">View Demo →</span>
+        </div>
+      </div>
+
+      <!-- BOOTSTRAP DEMO -->
+      <div onclick="openDemo('https://rahulchaudhary12-debug.github.io/Demos/demo-bootstrap.html','Bootstrap Demo — Course Landing Page')" style="
+        background:linear-gradient(135deg,rgba(124,58,240,.10),rgba(124,58,240,.04));
+        border:1px solid rgba(124,58,240,.25);
+        border-radius:20px;padding:36px 28px;
+        display:flex;flex-direction:column;gap:20px;
+        transition:transform .3s,box-shadow .3s;
+        cursor:pointer;
+      " onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 60px rgba(124,58,240,.12)'"
+         onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="
+          width:56px;height:56px;border-radius:14px;
+          background:rgba(124,58,240,.15);
+          display:flex;align-items:center;justify-content:center;
+          font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;
+          color:#8b5cf6;letter-spacing:.03em;
+        ">B</div>
+        <div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;margin-bottom:10px;color:var(--text)">Bootstrap Demo</h3>
+          <p style="color:var(--muted);line-height:1.65;font-size:.93rem">A CodeCraft course page built with Bootstrap 5 — grid, cards, navbar, form and responsive layout.</p>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;">
+          <span style="font-size:.8rem;color:#8b5cf6;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Bootstrap 5</span>
+          <span style="
+            background:rgba(124,58,240,.15);color:#8b5cf6;
+            border:1px solid rgba(124,58,240,.3);border-radius:50px;
+            padding:6px 18px;font-size:.82rem;font-weight:600;
+          ">View Demo →</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section style="padding:0 5% 40px;">
+    <div class="reveal" style="
+      background: linear-gradient(135deg, rgba(85,247,210,.10), rgba(139,92,246,.10), rgba(255,79,135,.08));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      padding: 34px 28px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.22);
+    ">
+      <div class="section-tag" style="margin-top:0">Documentation</div>
+      <h2 class="section-title" style="margin-bottom:14px">Learning Tracks for <em>Every Level</em></h2>
+      <p style="color:var(--muted);max-width:680px;line-height:1.7;margin-bottom:26px">
+        A compact documentation-style banner highlighting the main areas covered in the portfolio and training content.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 16px;text-align:center;">
+          <div style="font-family:'Syne',sans-serif;font-weight:800;letter-spacing:.08em;color:var(--accent);font-size:.82rem;">FULL STACK</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 16px;text-align:center;">
+          <div style="font-family:'Syne',sans-serif;font-weight:800;letter-spacing:.08em;color:var(--accent2);font-size:.82rem;">HTML</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 16px;text-align:center;">
+          <div style="font-family:'Syne',sans-serif;font-weight:800;letter-spacing:.08em;color:var(--accent3);font-size:.82rem;">CSS</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 16px;text-align:center;">
+          <div style="font-family:'Syne',sans-serif;font-weight:800;letter-spacing:.08em;color:var(--accent);font-size:.82rem;">JAVASCRIPT</div>
+        </div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 16px;text-align:center;">
+          <div style="font-family:'Syne',sans-serif;font-weight:800;letter-spacing:.08em;color:var(--accent2);font-size:.82rem;">BOOTSTRAP FRAMEWORK</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" onclick="showPage('home')">
+          <div class="logo-dot"></div>
+          Code<span>Craft</span>
+        </a>
+        <p>Empowering every individual with the skills they need to thrive in a digital-first world.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About Us</a></li>
+          <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Baneshwor, Kathmandu</a></li>
+          <li><a href="#">+977 9800000000</a></li>
+          <li><a href="#">info@codecraft.com.np</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright 2026 CodeCraft Nepal. All rights reserved.</span>
+      <span>Made with care in Kathmandu</span>
+    </div>
+  </footer>
+</div>
+
+<!-- LOGIN PAGE -->
+<div class="page" id="page-login">
+  <div class="login-wrap">
+    <div class="login-bg"></div>
+    <div class="login-card">
+      <div class="login-logo">
+        <a href="#" class="logo" onclick="showPage('home')">
+          <div class="logo-dot"></div>
+          Code<span>Craft</span>
+        </a>
+        <p>Welcome back - continue your learning journey</p>
+      </div>
+
+      <div class="login-tabs">
+        <div class="login-tab active" onclick="switchTab('login')">Sign In</div>
+        <div class="login-tab" onclick="switchTab('register')">Register</div>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div class="login-form-section active" id="tab-login">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin:-8px 0 20px;font-size:.82rem">
+          <label style="display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:var(--muted);cursor:pointer">
+            <input type="checkbox" style="width:auto;margin:0" /> Remember me
+          </label>
+          <a href="#" style="color:var(--accent);text-decoration:none;font-size:.82rem">Forgot password?</a>
+        </div>
+        <button class="btn-submit" onclick="submitLogin()">Sign In -></button>
+        <div class="divider">or continue with</div>
+        <div class="social-btns">
+          <button class="social-btn">Google</button>
+          <button class="social-btn">Facebook</button>
+        </div>
+      </div>
+
+      <!-- REGISTER FORM -->
+      <div class="login-form-section" id="tab-register">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Aarav" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Sharma" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+977 98XXXXXXXX" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create a strong password" />
+        </div>
+        <button class="btn-submit" onclick="submitRegister()">Create Account -></button>
+        <div class="divider">or</div>
+        <div class="social-btns">
+          <button class="social-btn">Google</button>
+        </div>
+      </div>
+
+      <div class="login-footer">
+        By continuing, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openDemo(file, title) {
+    var modal = document.getElementById('demoModal');
+    document.getElementById('demoTitle').textContent = title;
+    document.getElementById('demoFrame').src = file;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDemo() {
+    var modal = document.getElementById('demoModal');
+    modal.style.display = 'none';
+    document.getElementById('demoFrame').src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeDemo();
+  });
+</script>
+<script src="Javascript/main.js"></script>
+</body>
+</html>
